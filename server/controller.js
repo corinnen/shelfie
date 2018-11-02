@@ -12,7 +12,7 @@ module.exports = {
 
     addProduct: (req, res) => {
         let db = req.app.get('db')
-        db.create_inventory().then(response => {
+        db.create_product().then(response => {
             res.send(response)
         }).catch(err => {
             console.log('error', err)
